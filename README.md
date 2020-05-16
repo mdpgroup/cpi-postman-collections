@@ -5,14 +5,14 @@ This repository contains Postman collection templates for SAP Cloud Platform Int
 Advantages of using these collections and the environment structure:
 
 - Easy to switch between tenants, you can use the same environment information also for your Flows.
-- A standardized way to use CSRF token for the APIs that use `POST`, `PUT`, `DELETE` methods.
+- A standardized and easy way to use CSRF token for the APIs that use `POST`, `PUT`, `DELETE` methods.
 - Requests and responses are JSON by default. You can remove `Accept` and `Content-Type` headers to switch to XML.
 
 ## Available collections
 
-### [Partner Directory](partner-directory.postman_collection.json)
+### [Partner Directory](cpi-partner-directory.postman_collection.json)
 
-- [Download the collection](/../../raw/master/partner-directory.postman_collection.json)
+- [Download the collection](/../../raw/master/cpi-partner-directory.postman_collection.json)
 - API documentation: <https://api.sap.com/api/PartnerDirectory/resource>
 
 ## Installation & Usage
@@ -29,8 +29,8 @@ Advantages of using these collections and the environment structure:
 
 This repo is open to contribution. You can send pull requests or open issues.
 
-
 ## License
+
 Released under MIT license.
 See the [LICENSE](LICENSE.md) file for license rights and limitations.
 
