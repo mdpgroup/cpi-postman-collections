@@ -1,0 +1,886 @@
+{
+  "info": {
+    "_postman_id": "5101633c-2733-47da-8d66-80e7628c1b5f",
+    "name": "CPI Partner Directory",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "String Parameters",
+      "item": [
+        {
+          "name": "Get String Parameters",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "{{cpi_password}}",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "{{cpi_username}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{cpi_tenant_url}}/api/v1/StringParameters",
+              "host": ["{{cpi_tenant_url}}"],
+              "path": ["api", "v1", "StringParameters"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create String Parameters",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "{{cpi_password}}",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "{{cpi_username}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "X-CSRF-Token",
+                "value": "{{cpi_x_csrf_token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"Pid\": \"Partner-2\",\n    \"Id\": \"ADDRESS\",\n    \"Value\": \"https://b2b.example.com/execute\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{cpi_tenant_url}}/api/v1/StringParameters",
+              "host": ["{{cpi_tenant_url}}"],
+              "path": ["api", "v1", "StringParameters"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update String Parameters",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "{{cpi_password}}",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "{{cpi_username}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "X-CSRF-Token",
+                "value": "{{cpi_x_csrf_token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": " {\r\n              \r\n                \"Value\": \"https://b2b.example.com/execute2\"\r\n \t\r\n }"
+            },
+            "url": {
+              "raw": "{{cpi_tenant_url}}/api/v1/StringParameters(Pid='Partner-2',Id='ADDRESS')",
+              "host": ["{{cpi_tenant_url}}"],
+              "path": [
+                "api",
+                "v1",
+                "StringParameters(Pid='Partner-2',Id='ADDRESS')"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete String Parameters",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "{{cpi_password}}",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "{{cpi_username}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "X-CSRF-Token",
+                "value": "{{cpi_x_csrf_token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "{{cpi_tenant_url}}/api/v1/StringParameters(Pid='Partner-2',Id='ADDRESS')",
+              "host": ["{{cpi_tenant_url}}"],
+              "path": [
+                "api",
+                "v1",
+                "StringParameters(Pid='Partner-2',Id='ADDRESS')"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "protocolProfileBehavior": {}
+    },
+    {
+      "name": "Binary Parameters",
+      "item": [
+        {
+          "name": "Binary Parameters GET Select",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "{{cpi_password}}",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "{{cpi_username}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "type": "text",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{cpi_tenant_url}}/api/v1/BinaryParameters?$select=Pid,Id,ContentType",
+              "host": ["{{cpi_tenant_url}}"],
+              "path": ["api", "v1", "BinaryParameters"],
+              "query": [
+                {
+                  "key": "$select",
+                  "value": "Pid,Id,ContentType"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Binary Parameters GET Single with content",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "{{cpi_password}}",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "{{cpi_username}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "type": "text",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{cpi_tenant_url}}/api/v1/BinaryParameters(Pid='GenericPartner',Id='xsl_util')",
+              "host": ["{{cpi_tenant_url}}"],
+              "path": [
+                "api",
+                "v1",
+                "BinaryParameters(Pid='GenericPartner',Id='xsl_util')"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Binary Parameters",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "{{cpi_password}}",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "{{cpi_username}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "type": "text",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "type": "text",
+                "value": "application/json"
+              },
+              {
+                "key": "X-CSRF-Token",
+                "type": "text",
+                "value": "{{cpi_x_csrf_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": " {\r\n    \"Pid\": \"GenericPartner\",\r\n    \"Id\": \"xsl_util\",\r\n\r\n    \"ContentType\": \"zip\",\r\n    \"Value\": \"UEsDBBQAAAAIAJlpEEvRr/FglgEAAGEDAAAMAAAAeHNsX3V0aWwueHNsdZNdS8MwFIavK/gfQhio4BY/blxZJyjqjRfiBwgiI6ZnWzBNwkm6rf/e9Gtb3daL0rTPe97z5qSj21WmyALQSaMTejm4oAS0MKnUs4R+vD/2b+jt+PhotHIqdr5Q4OYAfqO4CorjIxKuUEi7OHAJnXtvY8aWy+VgeT0wOGOXw+GQfb49s3fk2k0NZh3VXMi1ynE7ECZj0rPARDWQcalrwgWkXFVMUwRWQuUp9BFcrnzfIkzlClwQCEnHNVPfqxyWI8+I5hkkNEjnXM+AssBFW9CCo+Q/ChruPkcMG1PcmxQcJQ4UCJ/Q1Ig8A+1PT2waP4EGlOKFow8PcUcS30nNsTg5a42iysVDZhX3rYtvd2ciGvEkzALKDBHZ278DnQL+w0nlEZFR28K4iaRy6Jvpuvtep0X2bMzvh2UP2mPx9VYVLj8kvX0m3+wVBMhFzYRUI7Z2K9Ox7XjVDA5kduAnFo0F9MU66E7OlpiUyzbgYaqK2sF2woezEQfvl0Zy2muPwjnpddy211WVZoY7EcNU63ebH2X8B1BLAQIfABQAAAAIAJlpEEvRr/FglgEAAGEDAAAMACQAAAAAAAAAIAAAAAAAAAB4c2xfdXRpbC54c2wKACAAAAAAAAEAGAAVgvuYgBbTAa11N2KAFtMBrXU3YoAW0wFQSwUGAAAAAAEAAQBeAAAAwAEAAAAA\"\r\n  }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{cpi_tenant_url}}/api/v1/BinaryParameters",
+              "host": ["{{cpi_tenant_url}}"],
+              "path": ["api", "v1", "BinaryParameters"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Binary Parameters",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "{{cpi_password}}",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "{{cpi_username}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Accept",
+                "type": "text",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "type": "text",
+                "value": "application/json"
+              },
+              {
+                "key": "X-CSRF-Token",
+                "type": "text",
+                "value": "{{cpi_x_csrf_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"ContentType\": \"zip\",\n    \"Value\": \"UEsDBBQAAAAIAJlpEEvRr/FglgEAAGEDAAAMAAAAeHNsX3V0aWwueHNsdZNdS8MwFIavK/gfQhio4BY/blxZJyjqjRfiBwgiI6ZnWzBNwkm6rf/e9Gtb3daL0rTPe97z5qSj21WmyALQSaMTejm4oAS0MKnUs4R+vD/2b+jt+PhotHIqdr5Q4OYAfqO4CorjIxKuUEi7OHAJnXtvY8aWy+VgeT0wOGOXw+GQfb49s3fk2k0NZh3VXMi1ynE7ECZj0rPARDWQcalrwgWkXFVMUwRWQuUp9BFcrnzfIkzlClwQCEnHNVPfqxyWI8+I5hkkNEjnXM+AssBFW9CCo+Q/ChruPkcMG1PcmxQcJQ4UCJ/Q1Ig8A+1PT2waP4EGlOKFow8PcUcS30nNsTg5a42iysVDZhX3rYtvd2ciGvEkzALKDBHZ278DnQL+w0nlEZFR28K4iaRy6Jvpuvtep0X2bMzvh2UP2mPx9VYVLj8kvX0m3+wVBMhFzYRUI7Z2K9Ox7XjVDA5kduAnFo0F9MU66E7OlpiUyzbgYaqK2sF2woezEQfvl0Zy2muPwjnpddy211WVZoY7EcNU63ebH2X8B1BLAQIfABQAAAAIAJlpEEvRr/FglgEAAGEDAAAMACQAAAAAAAAAIAAAAAAAAAB4c2xfdXRpbC54c2wKACAAAAAAAAEAGAAVgvuYgBbTAa11N2KAFtMBrXU3YoAW0wFQSwUGAAAAAAEAAQBeAAAAwAEAAAAA\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{cpi_tenant_url}}/api/v1/BinaryParameters(Pid='GenericPartner',Id='xsl_util')",
+              "host": ["{{cpi_tenant_url}}"],
+              "path": [
+                "api",
+                "v1",
+                "BinaryParameters(Pid='GenericPartner',Id='xsl_util')"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Binary Parameters",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "{{cpi_password}}",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "{{cpi_username}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Accept",
+                "type": "text",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "type": "text",
+                "value": "application/json"
+              },
+              {
+                "key": "X-CSRF-Token",
+                "type": "text",
+                "value": "{{cpi_x_csrf_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{cpi_tenant_url}}/api/v1/BinaryParameters(Pid='GenericPartner',Id='xsl_util')",
+              "host": ["{{cpi_tenant_url}}"],
+              "path": [
+                "api",
+                "v1",
+                "BinaryParameters(Pid='GenericPartner',Id='xsl_util')"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "protocolProfileBehavior": {}
+    },
+    {
+      "name": "Alternative Partners",
+      "item": [
+        {
+          "name": "Alternative Partners  GET Single",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "{{cpi_password}}",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "{{cpi_username}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "type": "text",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{cpi_tenant_url}}/api/v1/AlternativePartners(Hexagency='44554E53',Hexscheme='4E554D424552',Hexid='313233343536373839')",
+              "host": ["{{cpi_tenant_url}}"],
+              "path": [
+                "api",
+                "v1",
+                "AlternativePartners(Hexagency='44554E53',Hexscheme='4E554D424552',Hexid='313233343536373839')"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Alternative Partners  GET List",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "{{cpi_password}}",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "{{cpi_username}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "type": "text",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{cpi_tenant_url}}/api/v1/AlternativePartners",
+              "host": ["{{cpi_tenant_url}}"],
+              "path": ["api", "v1", "AlternativePartners"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Alternative Partner",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "{{cpi_password}}",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "{{cpi_username}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "type": "text",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "type": "text",
+                "value": "application/json"
+              },
+              {
+                "key": "X-CSRF-Token",
+                "type": "text",
+                "value": "{{cpi_x_csrf_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"Agency\": \"DUNS\",\n    \"Scheme\": \"NUMBER\",\n    \"Id\": \"123456789\",\n    \"Pid\": \"GenericPartner\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{cpi_tenant_url}}/api/v1/AlternativePartners",
+              "host": ["{{cpi_tenant_url}}"],
+              "path": ["api", "v1", "AlternativePartners"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Alternative Partners",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "{{cpi_password}}",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "{{cpi_username}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Accept",
+                "type": "text",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "type": "text",
+                "value": "application/json"
+              },
+              {
+                "key": "X-CSRF-Token",
+                "type": "text",
+                "value": "{{cpi_x_csrf_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"Pid\": \"GenericPartner2\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{cpi_tenant_url}}/api/v1/AlternativePartners(Hexagency='44554E53',Hexscheme='4E554D424552',Hexid='313233343536373839')",
+              "host": ["{{cpi_tenant_url}}"],
+              "path": [
+                "api",
+                "v1",
+                "AlternativePartners(Hexagency='44554E53',Hexscheme='4E554D424552',Hexid='313233343536373839')"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Alternative Partners",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "{{cpi_password}}",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "{{cpi_username}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Accept",
+                "type": "text",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "type": "text",
+                "value": "application/json"
+              },
+              {
+                "key": "X-CSRF-Token",
+                "type": "text",
+                "value": "{{cpi_x_csrf_token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{cpi_tenant_url}}/api/v1/AlternativePartners(Hexagency='44554E53',Hexscheme='4E554D424552',Hexid='313233343536373839')",
+              "host": ["{{cpi_tenant_url}}"],
+              "path": [
+                "api",
+                "v1",
+                "AlternativePartners(Hexagency='44554E53',Hexscheme='4E554D424552',Hexid='313233343536373839')"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "protocolProfileBehavior": {}
+    },
+    {
+      "name": "Partners",
+      "item": [
+        {
+          "name": "Partners GET",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "{{cpi_password}}",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "{{cpi_username}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "type": "text",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{cpi_tenant_url}}/api/v1/Partners",
+              "host": ["{{cpi_tenant_url}}"],
+              "path": ["api", "v1", "Partners"]
+            }
+          },
+          "response": []
+        }
+      ],
+      "protocolProfileBehavior": {}
+    },
+    {
+      "name": "Authorized Users",
+      "item": [
+        {
+          "name": "Authorized Users GET",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "{{cpi_password}}",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "{{cpi_username}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "type": "text",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{cpi_tenant_url}}/api/v1/Partners",
+              "host": ["{{cpi_tenant_url}}"],
+              "path": ["api", "v1", "Partners"]
+            }
+          },
+          "response": []
+        }
+      ],
+      "protocolProfileBehavior": {}
+    },
+    {
+      "name": "User Credential Parameters",
+      "item": [
+        {
+          "name": "User Credential Parameters GET",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "{{cpi_password}}",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "{{cpi_username}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "type": "text",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{cpi_tenant_url}}/api/v1/UserCredentialParameters",
+              "host": ["{{cpi_tenant_url}}"],
+              "path": ["api", "v1", "UserCredentialParameters"]
+            }
+          },
+          "response": []
+        }
+      ],
+      "protocolProfileBehavior": {}
+    },
+    {
+      "name": "Get CSRF",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "8082d4f8-a289-40fc-a7a6-657c579de89c",
+            "exec": [
+              "",
+              "let xsrfValue = pm.response.headers.get('X-CSRF-Token')",
+              "pm.environment.set(\"cpi_x_csrf_token\", xsrfValue);",
+              ""
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "password",
+              "value": "{{cpi_password}}",
+              "type": "string"
+            },
+            {
+              "key": "username",
+              "value": "{{cpi_username}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "type": "text",
+            "value": "application/json"
+          },
+          {
+            "key": "X-CSRF-Token",
+            "value": "Fetch",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{cpi_tenant_url}}/api/v1/",
+          "host": ["{{cpi_tenant_url}}"],
+          "path": ["api", "v1", ""]
+        }
+      },
+      "response": []
+    }
+  ],
+  "protocolProfileBehavior": {}
+}
