@@ -10,6 +10,10 @@ Advantages of using these collections and the environment structure:
 
 ## Available collections
 
+### [Common Environment Template](cpi-tenant-template.postman_environment.json)
+
+- [Download the environment](/../../raw/master/cpi-tenant-template.postman_environment.json)
+
 ### [Partner Directory](cpi-partner-directory.postman_collection.json)
 
 - [Download the collection](/../../raw/master/cpi-partner-directory.postman_collection.json)
